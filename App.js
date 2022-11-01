@@ -1,4 +1,4 @@
-import MainNavigation from './src/Navigation/navigation/MainNavigation'
+import MainNavigation from './src/navigation/MainNavigation'
 
 export default function App() {
     return (
