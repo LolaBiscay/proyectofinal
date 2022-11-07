@@ -8,7 +8,8 @@ class Login extends Component {
         super()
         this.state={
             email: '',
-            password: ''
+            password: '',
+            msjError: ''
         }
     }
 
@@ -16,6 +17,7 @@ class Login extends Component {
         auth.signInWithEmailAndPassword(email, password)
         .then(resp => console.log(resp))
         .catch(e => console.log(e))
+
 
     }
     render(){

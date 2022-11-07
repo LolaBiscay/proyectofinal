@@ -25,7 +25,7 @@ export default function TabNavigation (){
             name = 'Perfil' 
             component={Perfil}
             options={{
-                tabBarIcon: () => <FontAwesome name="user" size={24} color="black" /> // callback que devuelve el componente de fontawseonme 
+                tabBarIcon: () => <FontAwesome name="user" size={24} color="black" /> 
 
             }}
             />
@@ -33,10 +33,12 @@ export default function TabNavigation (){
             name = 'Posts' 
             component={Posts}
             options={{
-                tabBarIcon: () => <AntDesign name="plus" size={24} color="black" /> // callback que devuelve el componente de fontawseonme 
+                tabBarIcon: () => <AntDesign name="plus" size={24} color="black" /> 
 
             }}
             />
+        
+
         </Tab.Navigator>
     )
 }
