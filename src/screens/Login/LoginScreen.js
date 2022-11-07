@@ -11,13 +11,15 @@ class LoginScreen extends Component {
         }
     }
 
-    componentDidMount(){
-      auth.onAuthStateChanged(user => {
-        if(user !== null){
+    componentDidMount(){ //recibimos a user
+  
+
+      auth.onAuthStateChanged(user => { 
+        if(user !== null){ //Si user es distinto de null me redirige
           this.props.navigation.navigate('TabNavigation')
         }
       })
-      /* auth.signOut() */
+      /* HACER auth.signOut() */
     }
 
 

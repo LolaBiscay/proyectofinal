@@ -29,14 +29,14 @@ export default function TabNavigation (){
 
             }}
             />
-        {/* <Tab.Screen 
+        <Tab.Screen 
             name = 'Posts' 
             component={Posts}
             options={{
                 tabBarIcon: () => <AntDesign name="plus" size={24} color="black" /> // callback que devuelve el componente de fontawseonme 
 
             }}
-            /> */}
+            />
         </Tab.Navigator>
     )
 }

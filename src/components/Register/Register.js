@@ -17,6 +17,12 @@ class Register extends Component {
         .then(resp => console.log(resp))
         .catch(e => console.log(e))
     }
+
+    
+
+
+
+
     render(){
         return(
             <View>
