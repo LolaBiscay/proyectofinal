@@ -77,9 +77,12 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     paddingHorizontal:24
   },
-    input:{
-        borderWidth:1
-    }
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10
+}
 })
 
 export default LoginScreen

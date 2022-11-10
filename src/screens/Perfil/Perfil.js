@@ -10,7 +10,7 @@ class Perfil extends Component {
     render(){
         return(
             <View>
-                <Text> Mi Perfil </Text>
+                <Text style={styles.letra}> MI PERFIL </Text>
                 <TouchableOpacity 
                 onPress={ ()=> this.signOut()}
                 style={styles.boton}
@@ -24,10 +24,22 @@ class Perfil extends Component {
 }
 const styles = StyleSheet.create({
     boton: {
-        padding: 10,
-        borderColor: 'black',
-        borderWidth: 1
-    }
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10
+    },
+    letra:{
+        fontFamily: 'Copperplate',
+        fontSize: 20
+
+    },
+    // input: {
+    //     height: 40,
+    //     margin: 12,
+    //     borderWidth: 1,
+    //     padding: 10
+    // }
 })
 export default Perfil
 
