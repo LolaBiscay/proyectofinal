@@ -56,6 +56,10 @@ class Post extends Component {
     render() {
         return (
           <View>
+            <TouchableOpacity onPress={()=> this.props.navigation.navigate()}> 
+                <Text>{this.props.data.owner}</Text>
+            </TouchableOpacity>
+             
             <Text>{this.props.data.description}</Text>
             <View>
             <Text>{this.state.likesCount}</Text>  
