@@ -53,6 +53,7 @@ class Login extends Component {
 const Styles = StyleSheet.create({
     input: {
         borderWidth: 1,
+        backgroundColor: "red",
     }
 })
 

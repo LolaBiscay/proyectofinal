@@ -56,7 +56,14 @@ class Post extends Component {
     render() {
         return (
           <View>
-            <TouchableOpacity onPress={()=> this.props.navigation.navigate()}> 
+            <TouchableOpacity onPress={()=> this.props.navigation.navigate(
+                'HomeNavigation',{
+                    screen:'ProfileFriends',
+                    params:{
+                        email:this.props.data.owner
+                    }
+                }
+            )}> 
                 <Text>{this.props.data.owner}</Text>
             </TouchableOpacity>
              
