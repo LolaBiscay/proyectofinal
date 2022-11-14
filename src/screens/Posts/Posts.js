@@ -1,7 +1,7 @@
 import { Text, View, TextInput, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { Component } from 'react'
 import {auth, db} from '../../firebase/config'
-//import Camara from '../../components/Camara/Camara'
+import Camara from '../../components/Camara/Camara'
 
 class Posts extends Component {
     constructor(){
@@ -39,11 +39,11 @@ class Posts extends Component {
     render() {
         return (
         <View style = {styles.container}>
-            {/* {
+            { 
                 this.state.mostrarCamara ?
                 <Camara
                 cuandoSubaLaImagen = {(url)=> this.cuandoSubaLaImagen(url)}
-                /> : */}
+                /> : 
               <View>
                 <TextInput
                     keyboardType='default'
@@ -58,7 +58,7 @@ class Posts extends Component {
                     <Text>Enviar Post</Text>
                 </TouchableOpacity>
               </View>  
-           {/* } */}
+           }
         </View>
         )
     }
