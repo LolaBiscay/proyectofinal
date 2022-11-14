@@ -1,7 +1,6 @@
-import { Text, View, StyleSheet, Image } from 'react-native'
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import {Camera} from 'expo-camera'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 import {storage} from '../../firebase/config'
 
 
