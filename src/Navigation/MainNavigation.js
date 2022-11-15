@@ -6,7 +6,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigation from './TabNavigation';
 import LoginScreen from '../screens/Login/LoginScreen'
 import Register from "../screens/Register/Register";
-import Home from '../screens/Home/Home'
+import Home from '../screens/Home/Home';
+import Comments from '../screens/Comments/Comments'
 
 const Stack = createNativeStackNavigator()
 
@@ -36,6 +37,16 @@ function MainNavigation (){
                     headerShown: false
                 }}
                 />
+                {/* <Stack.Screen
+                name='Comments'
+                component={Comments}
+                unmountOnBlur={true}
+                /> */}
+
+
+
+
+
             </Stack.Navigator>
         </NavigationContainer>
     )
