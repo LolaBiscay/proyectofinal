@@ -7,6 +7,7 @@ import Home from '../screens/Home/Home'
 import Perfil from '../screens/Perfil/Perfil';
 import Posts from '../screens/Posts/Posts'
 import HomeNavigation from './HomeNavigation';
+import Search from '../screens/Search/Search'
 
 
 const Tab = createBottomTabNavigator()
@@ -38,6 +39,15 @@ export default function TabNavigation (){
 
             }}
             />
+        <Tab.Screen 
+        name='Search' 
+        component={Search}
+        options={{
+          tabBarIcon: () => <FontAwesome name="search" size={35} color={'black'}/>,
+          headerShown:false
+        }} 
+        />
+
         
 
         </Tab.Navigator>

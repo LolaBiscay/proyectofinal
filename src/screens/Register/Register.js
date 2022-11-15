@@ -8,7 +8,8 @@ class Register extends Component {
         this.state ={
             username:'',
             email:'',
-            password:''
+            password:'',
+            biografia: ''
         }
     }
 
@@ -53,6 +54,13 @@ class Register extends Component {
                 onChangeText={text => this.setState({password: text})}
                 value={this.state.password}
                 secureTextEntry={true}
+            />
+            <TextInput
+                style={styles.input}
+                placeholder='Escribe tu biografia'
+                keyboardType='default'
+                onChangeText={text => this.setState({biografia: text})}
+                value={this.state.biografia}
             />
             <View>
                 <TouchableOpacity onPress={()=> this.registrarUsuario(this.state.username, this.state.email, this.state.password)}>
