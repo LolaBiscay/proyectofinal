@@ -38,14 +38,11 @@ class Home extends Component {
   render(){
     return (
       <>
-        <View style={styles.container1}>
-
-        <Image style={styles.logo}
+      <Image style={styles.logo}
           source={require('../../../assets/logo.png')}
           resizeMode = 'contain'
         />
-          <Text>Home</Text>
-        </View>
+      
         <View style={styles.container3}>
           <FlatList
             data={this.state.allPosts}
@@ -74,9 +71,14 @@ const styles = StyleSheet.create({
     height:300
   },
   logo: {
-    height: 40,
+    height: 100,
     marginTop: 5,
     marginBottom: 10
+  },
+  text:{
+    fontSize: 20, 
+    textAlign: 'center',
+    fontWeight: 'bold'
   }
 })
 

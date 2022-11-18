@@ -79,74 +79,61 @@ class Post extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-            <View style={styles.container1}>
-            {/* <TouchableOpacity onPress={()=> this.props.navigation.navigate (
-                    'HomeNavigation',{
-                        screen: 'ProfileFriends',
-                        params: {email:this.props.data.owner}
-                    })}>
-                <Text >{this.props.data.owner}</Text>
-            </TouchableOpacity> */}
-                
+        <View style={styles.container}>
+            <View style={styles.card}>
+                <TouchableOpacity onPress={()=> this.props.navigation.navigate (
+                            'HomeNavigation',{
+                                screen: 'ProfileFriends',
+                                params: {email:this.props.data.owner}
+                            })}>
+                        <Text style={styles.textUser}>{this.props.data.owner}</Text>
+                </TouchableOpacity>
             </View>
-            <View >
+
+            <View>
             <Image style={styles.image} 
                     source={{uri: this.props.data.foto}}
                     resizeMode='contain'/>
             </View>
 
-            <TouchableOpacity onPress={()=> this.props.navigation.navigate (
-                    'HomeNavigation',{
-                        screen: 'ProfileFriends',
-                        params: {email:this.props.data.owner}
-                    })}>
-                <Text >{this.props.data.owner}</Text>
-            </TouchableOpacity>
-            
-            <View style={styles.likeycoment}>
-    
-            <View style={styles.like}>
-                <Text>{this.state.likesCount}</Text>
-    
-            
-            {
-                this.state.isMyLike ?
-                    <TouchableOpacity onPress={()=> this.unlike()}>
-                        <FontAwesome name='heart' color='red' size={32} />
-                    </TouchableOpacity>
-                :
-                    <TouchableOpacity onPress={()=> this.like()}>
-                        <FontAwesome name='heart-o' color='red' size={32} />
-                    </TouchableOpacity>
-            }
-    
-            <View style={styles.comment} >
-            <TouchableOpacity onPress={()=> this.props.navigation.navigate (
-                    'Comments',
-                    {id:this.props.id}
-                    )}>
-                <FontAwesome name='comment' size={32} />
-    
-            </TouchableOpacity>
-            {/* <TouchableOpacity onPress={()=> this.props.navigation.navigate (
-                    'Likes',
-                    {id:this.props.id}
-                    )}>
-                <Text style={styles.agregar}>Los likes</Text>
-    
-            </TouchableOpacity> */}
-            </View>
         
-            </View>
-    
-    
+            <View style={styles.likeycoment}>
+                
+                    {
+                        this.state.isMyLike ?
+                            <TouchableOpacity onPress={()=> this.unlike()}>
+                                <FontAwesome name='heart' color='red' size={32} />
+                            </TouchableOpacity>
+                        :
+                            <TouchableOpacity onPress={()=> this.like()}>
+                                <FontAwesome name='heart-o' color='red' size={32} />
+                            </TouchableOpacity>
+                    }
+            
+                    <View style={styles.comment} >
+                    <TouchableOpacity onPress={()=> this.props.navigation.navigate (
+                            'Comments',
+                            {id:this.props.id}
+                            )}>
+                        <FontAwesome name='comment' size={32} />
+            
+                    </TouchableOpacity>
+                    {/* <TouchableOpacity onPress={()=> this.props.navigation.navigate (
+                            'Likes',
+                            {id:this.props.id}
+                            )}>
+                        <Text style={styles.agregar}>Los likes</Text>
+            
+                    </TouchableOpacity> */}
+                    </View>
+                
             </View>
             
+            <Text style={styles.likesCount}>{this.state.likesCount} Likes</Text>
     
-              <View style={styles.container2}>
+            <View style={styles.container2}>
                 <Text style={styles.subtitle}>Descripcion: {this.props.data.description}</Text>
-                </View>
+            </View>
            
     
                
@@ -169,8 +156,6 @@ class Post extends Component {
                     <Text style={styles.comentario}> Aun no hay comentarios! </Text>
                 </TouchableOpacity>
                 }
-            
-            
             </View>
     
             <View>
@@ -180,8 +165,9 @@ class Post extends Component {
                     <Text style={styles.agregar}> Borrar posteo </Text>
                     </TouchableOpacity> : ''
                 }
-                </View>
+            </View>
         </View>
+
         )
     }
     }
@@ -201,8 +187,6 @@ class Post extends Component {
             flex: 1,
             borderWidth: 3,
             borderRadius: 10,
-    
-        
         },
         
         container1:{
@@ -213,11 +197,7 @@ class Post extends Component {
             width: '100%',
             
         },
-        likeycoment:{
-            justifyContent: 'space-around',
-            flexDirection: 'row'
-        },
-    
+       
         container2:{
             flex:3,
             margintop: 60,
@@ -233,7 +213,7 @@ class Post extends Component {
             height: 265,
             width: 100000,
             border: 'black',
-            marginBottom: 30,
+            marginBottom: 20,
         },
     
         agregar:{
@@ -245,15 +225,31 @@ class Post extends Component {
         },
         
         like: {
-            justifyContent: 'left',
             flexDirection: 'row',
-            marginBottom: 20,
+            marginBottom: 10,
         },
-
     
         comentario: {
             color: "black",
             fontFamily: 'Copperplate',
+        },
+
+        textUser: {
+            fontSize: 20,
+            fontWeight: 'bold', 
+            marginBottom: 10
+            
+        },
+
+        likesCount:{
+            fontSize: 15,
+            fontWeight: 'bold'
+        },
+
+        likeycoment:{
+            marginRight: 8,
+            flexDirection: 'row',
+            marginBottom: 5
         }
         }
         )

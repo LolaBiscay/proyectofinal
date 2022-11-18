@@ -19,7 +19,7 @@ class LoginScreen extends Component {
           this.props.navigation.navigate('TabNavigation')
         }
       })
-      /* HACER auth.signOut() */
+      
     }
 
 

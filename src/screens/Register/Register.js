@@ -3,7 +3,7 @@ import { Text, View, TextInput, StyleSheet, TouchableOpacity } from 'react-nativ
 import {auth, db} from '../../firebase/config'
 
 class Register extends Component {
-    constructor(){
+    constructor(){ //Constructor guarda el estado inicial del componente y administra props
         super()
         this.state ={
             username:'',
@@ -38,7 +38,7 @@ class Register extends Component {
                 style={styles.input}
                 placeholder='Escribe tu nombre de usuario'
                 keyboardType='default'
-                onChangeText={text => this.setState({username: text})}
+                onChangeText={text => this.setState({username: text})} //guarda en el estado el cambio del input
                 value={this.state.username}
             />
             <TextInput
@@ -65,6 +65,7 @@ class Register extends Component {
             />
             <View>
                 <TouchableOpacity onPress={()=> this.registrarUsuario(this.state.username, this.state.email, this.state.password,this.state.biografia)}>
+                {/* /le paso el estado con la info que el usuario cargo en el formulario*/}
                     <Text>Registrarme</Text>
                 </TouchableOpacity>
             </View>

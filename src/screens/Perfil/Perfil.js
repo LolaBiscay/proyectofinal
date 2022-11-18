@@ -53,14 +53,14 @@ class Perfil extends Component {
             source={{uri: this.state.misDatos.foto}} 
             resizeMode = 'cover'
           />
-          <Text style={styles.textCard}>Username: {this.state.misDatos.username}</Text>
-          <Text style={styles.textCard}>Email: {this.state.misDatos.email}</Text>
+          <Text style={styles.text}>Username: {this.state.misDatos.username}</Text>
+          <Text style={styles.text}>Email: {this.state.misDatos.email}</Text>
         </View>      
        {<Text style={styles.text}>Biografia: {this.state.misDatos.biografia}</Text>    }
         <Text style={styles.text}>Cantidad de posts: {this.state.posteos.length}</Text>
-        <Text style={styles.textPublicaciones}>Publicaciones:</Text>
+        <Text style={styles.text}>Publicaciones:</Text>
         {this.state.posteos.length >= 1 ? 
-        <View style={styles.publicaciones}>
+        <View >
           <FlatList 
         data = {this.state.posteos}
         keyExtractor = {(item) => item.id.toString()}
@@ -99,12 +99,11 @@ const styles = StyleSheet.create({
         fontSize: 20
 
     },
-    // input: {
-    //     height: 40,
-    //     margin: 12,
-    //     borderWidth: 1,
-    //     padding: 10
-    // }
+    text:{
+      fontSize: 18,
+      fontWeight: 'bold',
+      marginLeft: 50
+    }
 })
 export default Perfil
 
