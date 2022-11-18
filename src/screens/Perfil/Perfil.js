@@ -56,7 +56,7 @@ class Perfil extends Component {
           <Text style={styles.textCard}>Username: {this.state.misDatos.username}</Text>
           <Text style={styles.textCard}>Email: {this.state.misDatos.email}</Text>
         </View>      
-       {/* <Text style={styles.text}>Biografia: {this.state.misDatos.biografia}</Text>    */}
+       {<Text style={styles.text}>Biografia: {this.state.misDatos.biografia}</Text>    }
         <Text style={styles.text}>Cantidad de posts: {this.state.posteos.length}</Text>
         <Text style={styles.textPublicaciones}>Publicaciones:</Text>
         {this.state.posteos.length >= 1 ? 
