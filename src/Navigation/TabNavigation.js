@@ -14,12 +14,14 @@ const Tab = createBottomTabNavigator()
 
 export default function TabNavigation (){
     return(
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{tabBarShowLabel: false}}>
             <Tab.Screen 
             name = 'HomeNavigation' 
             component={HomeNavigation}
             options={{
-                tabBarIcon: () => <FontAwesome name="home" size={24} color="black" /> // callback que devuelve el componente de fontawseonme 
+                tabBarIcon: () => <FontAwesome name="home" size={24} color="black" />, 
+                 // callback que devuelve el componente de fontawseonme 
+                 headerShown: false
 
             }}
             />

@@ -20,7 +20,6 @@ function MainNavigation (){
                 component={LoginScreen} 
                 options={{
                     headerShown: false
-                    //es un booleano 
                 }}
                 />
                 <Stack.Screen 
