@@ -32,7 +32,7 @@ class Login extends Component {
                 value={this.state.email}
             />
             <TextInput
-                style={Styles.input}
+                
                 keyboardType="default"
                 placeholder= 'Ingresa tu password'
                 onChangeText={text => this.setState({password: text})}
@@ -50,11 +50,6 @@ class Login extends Component {
     }
 }
 
-const Styles = StyleSheet.create({
-    input: {
-        borderWidth: 1,
-        backgroundColor: "red",
-    }
-})
+
 
 export default Login

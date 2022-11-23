@@ -33,7 +33,7 @@ class Register extends Component {
     return (
     <View style={styles.container}>
         <View>
-            <Text>Formulario de registro</Text>
+            <Text style={styles.registro}>Formulario de registro</Text>
             <TextInput
                 style={styles.input}
                 placeholder='Escribe tu nombre de usuario'
@@ -66,13 +66,13 @@ class Register extends Component {
             <View>
                 <TouchableOpacity onPress={()=> this.registrarUsuario(this.state.username, this.state.email, this.state.password,this.state.biografia)}>
                 {/* /le paso el estado con la info que el usuario cargo en el formulario*/}
-                    <Text>Registrarme</Text>
+                    <Text style={styles.boton} >Registrarme</Text>
                 </TouchableOpacity>
             </View>
             <View>
-                <Text>Ya tienes un cuenta?</Text>
+                <Text style={styles.texto}>Ya tienes un cuenta?</Text>
                 <TouchableOpacity onPress={ () => this.props.navigation.navigate('Login')}>
-                    <Text>Logueate</Text>
+                    <Text style={styles.boton}> LOGUEATE!  </Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -83,17 +83,52 @@ class Register extends Component {
 
 const styles = StyleSheet.create({
     container:{
-      flex:1,
-      justifyContent:'center',
-      paddingHorizontal:24
+        flex:1,
+        justifyContent:'center',
+        paddingHorizontal:32
     },
+
     input:{
-        borderWidth:1
+        borderColor: '#ccc',
+        borderWidth: 2,
+        marginBottom: 10,
+        padding: 10,
+        fontSize: 15,
+        borderRadius: 5,
+        textAlign: 'center'
     },
-    containerRedirect:{
-        marginTop: 32
-    }
-  })
-  
+
+    registro:{
+        textAlign: 'center',
+        fontSize: 24,
+        marginBottom: 15,
+        fontWeight: 'bold',
+        color: '#8e4cc4',
+    },
+
+    boton:{
+        textAlign: 'center',
+        backgroundColor: '#d8bbf1',
+        padding: 5,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        marginBottom: 5,
+        fontWeight: 'bold',
+        color:'#8e4cc4',
+        fontSize: 17 
+    },
+
+    entrar:{
+        color: '#8e4cc4',
+        fontWeight: 'bold'
+    },
+    texto: {
+        textAlign: 'center',
+        marginTop:20,
+        marginBottom: 20
+      
+      }
+})
 
 export default Register

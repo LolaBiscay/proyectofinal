@@ -1,9 +1,6 @@
-
-
-import { View, Text, StyleSheet, Image, FlatList,ActivityIndicator,TouchableOpacity} from 'react-native'
+import { View, StyleSheet, Image, FlatList} from 'react-native'
 import React, {Component} from 'react'
-import Contador from '../../components/Contador/Contador'
-import {info} from '../../api/data'
+
 import Post from '../../components/Post/Post'
 import {db} from '../../firebase/config'
 
@@ -37,49 +34,37 @@ class Home extends Component {
   
   render(){
     return (
-      <>
-      <Image style={styles.logo}
+      <View style={styles.container}>
+      <Image style={styles.image}
           source={require('../../../assets/logo.png')}
           resizeMode = 'contain'
         />
       
-        <View style={styles.container3}>
+        <View style={styles.otroContainer}>
           <FlatList
             data={this.state.allPosts}
             keyExtractor={item => item.id.toString()}
             renderItem={({item}) => <Post navigation={this.props.navigation} id={item.id} data={item.data} />}
           />
         </View>
-      </>
+      </ View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container1:{
-    flex:1,
-    justifyContent:'center',
-    alignItems:'center'
+  container:{
+    flex: 1
   },
-  container2:{
-    flex:3
-  },
-  container3:{
+  otroContainer:{
     flex:5
   },
   image:{
-    height:300
-  },
-  logo: {
-    height: 100,
+    height: 120,
     marginTop: 5,
-    marginBottom: 10
-  },
-  text:{
-    fontSize: 20, 
-    textAlign: 'center',
-    fontWeight: 'bold'
+    marginBottom: 5
   }
 })
 
 export default Home
+

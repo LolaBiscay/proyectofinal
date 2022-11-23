@@ -17,7 +17,7 @@ export default function TabNavigation (){
             name = 'HomeNavigation' 
             component={HomeNavigation}
             options={{
-                tabBarIcon: () => <FontAwesome name="home" size={24} color="black" />, 
+                tabBarIcon: () => <FontAwesome name="home" size={24} color='#44166a' />, 
                  // callback que devuelve el componente de fontawseonme 
                  headerShown: false
 
@@ -27,7 +27,7 @@ export default function TabNavigation (){
             name = 'Perfil' 
             component={Perfil}
             options={{
-                tabBarIcon: () => <FontAwesome name="user" size={24} color="black" /> 
+                tabBarIcon: () => <FontAwesome name="user" size={24} color='#44166a'/> 
 
             }}
             />
@@ -35,7 +35,7 @@ export default function TabNavigation (){
             name = 'Posts' 
             component={Posts}
             options={{
-                tabBarIcon: () => <AntDesign name="plus" size={24} color="black" /> 
+                tabBarIcon: () => <AntDesign name="plus" size={24} color='#44166a' /> 
 
             }}
             />
@@ -43,7 +43,7 @@ export default function TabNavigation (){
         name='Search' 
         component={Search}
         options={{
-          tabBarIcon: () => <FontAwesome name="search" size={35} color={'black'}/>,
+          tabBarIcon: () => <FontAwesome name="search" size={35} color='#44166a'/>,
           headerShown:false
         }} 
         />

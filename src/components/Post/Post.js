@@ -132,7 +132,7 @@ class Post extends Component {
             <Text style={styles.likesCount}>{this.state.likesCount} Likes</Text>
     
             <View style={styles.container2}>
-                <Text style={styles.subtitle}>Descripción: {this.props.data.description}</Text>
+                <Text style={styles.descripcion}>Descripción: {this.props.data.description}</Text>
             </View>
            
     
@@ -162,7 +162,7 @@ class Post extends Component {
                 {
                     this.state.miPost ?
                     <TouchableOpacity onPress={()=> this.borrarPosteo()}>
-                    <Text style={styles.agregar}> Borrar posteo </Text>
+                    <Text style={styles.boton}> Borrar posteo </Text>
                     </TouchableOpacity> : ''
                 }
             </View>
@@ -180,36 +180,38 @@ class Post extends Component {
             padding: 40,
             justifyContent:'space-between',
             alignItems:'center',
-            margin: 50,
+            margin: 200,
             marginBottom: 10,
             backgroundColor: 'white',
+            
             marginTop: 20,
             flex: 1,
             borderWidth: 3,
-            borderRadius: 10,
+            borderRadius: 5,
+            borderColor: '#602293'
         },
-        container1:{
-            justifyContent: 'left',
-            backgroundColor: 'white',
-            color: 'black',
-            marginBottom: 30,
-            width: '100%',
-            
-        },
-        container2:{
-            flex:3,
-            margintop: 60,
-            marginBottom: 10,
-        },
-        subtitle:{
-            // fontFamily: 'Open Sans', 
+
+        descripcion:{
             fontSize: 20,
-            marginTop: 20
+            marginTop: 20,
+            color:'#8e4cc4',
+            marginBottom: 20
+        },
+        boton:{
+            textAlign: 'center',
+            backgroundColor: '#d8bbf1',
+            padding: 5,
+            borderRadius: 8,
+            borderWidth: 1,
+            borderColor: '#ccc',
+            marginBottom: 5,
+            fontWeight: 'bold',
+            color:'#602293',
+            fontSize: 17 
         },
         image:{
             height: 265,
             width: 100000,
-            border: 'black',
             marginBottom: 20,
         },
     
@@ -217,9 +219,6 @@ class Post extends Component {
             color: 'black',
         },
     
-        descripcion:{
-            color: 'black',
-        },
         
         like: {
             flexDirection: 'row',
@@ -228,6 +227,8 @@ class Post extends Component {
     
         comentario: {
             color: "black",
+            marginBottom: 20,
+
             // fontFamily: 'Open Sans',
             // fontFamily: 'Copperplate',
         },
@@ -236,8 +237,7 @@ class Post extends Component {
             fontSize: 20,
             fontWeight: 'bold', 
             marginBottom: 10,
-            // fontFamily: 'Open Sans',
-            
+            color:'#602293'
         },
 
         likesCount:{
@@ -249,8 +249,9 @@ class Post extends Component {
             marginRight: 8,
             flexDirection: 'row',
             marginBottom: 5
-        }
-        }
-        )
+        },
+        
+    }
+)
 
 export default Post

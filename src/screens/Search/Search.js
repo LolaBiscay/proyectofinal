@@ -50,7 +50,7 @@ class Search extends Component {
   
     return( 
         <View style={styles.container}>
-            <Text>Search</Text>
+            <Text style={styles.search}> SEARCH </Text>
             <TextInput style={styles.input}
               onChangeText={ text => this.setState( {busqueda:text} )}
               placeholder='Ingresa tu busqueda'
@@ -58,18 +58,10 @@ class Search extends Component {
             </TextInput>
 
             <TouchableOpacity onPress={()=> this.buscar(this.state.busqueda)}>
-                <Text style={styles.button}> Buscar</Text>
+                <Text style={styles.boton}> Buscar</Text>
             </TouchableOpacity>
 
-            {/* <FlatList 
-              data={this.state.users}
-              keyExtractor={(item) => item.id}
-              renderItem= {({item}) => <Text>{item.data.username}</Text>}
-             /> */}
-             
-
-
-
+      
              <FlatList
               data={this.state.users}
               keyExtractor={(item) => item.id}
@@ -87,8 +79,6 @@ class Search extends Component {
             />
 
 
-        
-             
         </View>
     )
   }
@@ -115,15 +105,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
     borderRadius: 5,
     margin: 10,
+    textAlign: 'center'
   },
-  button:{
-        height: 40,
-        margin: 10,
-        borderWidth: 1,
-        padding: 10,
-        borderRadius: 8,
-        textAlign: 'center',
-
+  boton:{
+    textAlign: 'center',
+    backgroundColor: '#d8bbf1',
+    padding: 5,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    marginBottom: 5,
+    fontWeight: 'bold',
+    color:'#8e4cc4',
+    fontSize: 17 
+},
+  search:{
+    textAlign: 'center',
+    fontSize: 50
   }
 })
 

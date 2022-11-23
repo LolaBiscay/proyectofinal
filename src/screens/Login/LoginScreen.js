@@ -12,8 +12,6 @@ class LoginScreen extends Component {
     }
 
     componentDidMount(){ //recibimos a user
-  
-
       auth.onAuthStateChanged(user => { 
         if(user !== null){ //Si user es distinto de null me redirige
           this.props.navigation.navigate('TabNavigation')
@@ -35,7 +33,7 @@ class LoginScreen extends Component {
       <View style={styles.container}>
         <View>
 
-          <Text>Login</Text>
+          <Text style={styles.title}> Iniciar sesión </Text>
           <TextInput
               style={styles.input}
               keyboardType='email-address'
@@ -53,18 +51,17 @@ class LoginScreen extends Component {
           />
           <View>
               <TouchableOpacity onPress={()=> this.loguear(this.state.email, this.state.password)}>
-                  <Text>Log In</Text>
+                  <Text style={styles.boton}> Ingresá! </Text>
               </TouchableOpacity>
           </View>
 
           <View>
-            <Text>
-              Aun no tienes una cuenta
-            </Text>
+            <Text style={styles.texto}> ¿Aun no tienes una cuenta?: </Text>
             <TouchableOpacity onPress={()=> this.props.navigation.navigate('Register')}> {/* le paso como parametro donde quiero ir */}
-              <Text>Registrate</Text>
+              <Text style={styles.boton}> Registrate</Text>
             </TouchableOpacity>
           </View>
+
         </View>
       </View>
     )
@@ -72,16 +69,45 @@ class LoginScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+
   container:{
     flex:1,
     justifyContent:'center',
     paddingHorizontal:24
   },
-  input: {
-    height: 40,
-    margin: 12,
+  title:{
+    textAlign: 'center',
+    fontSize: 25,
+    marginBottom: 15,
+    fontWeight: 'bold',
+    color: '#8e4cc4',
+  },
+  input:{
+    borderColor: '#ccc',
+    borderWidth: 2,
+    marginBottom: 10,
+    padding: 10,
+    fontSize: 15,
+    borderRadius: 5,
+    textAlign: 'center'
+},
+  boton:{
+    textAlign: 'center',
+    backgroundColor: '#d8bbf1',
+    padding: 5,
+    borderRadius: 8,
     borderWidth: 1,
-    padding: 10
+    borderColor: '#ccc',
+    marginBottom: 5,
+    fontWeight: 'bold',
+    color:'#8e4cc4',
+    fontSize: 17
+},
+texto: {
+  textAlign: 'center',
+  marginTop:20,
+  marginBottom: 20
+
 }
 })
 

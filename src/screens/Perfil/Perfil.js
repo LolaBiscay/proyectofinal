@@ -47,9 +47,9 @@ class Perfil extends Component {
         return(
             <View>
                   <>
-      <View style={styles.containerDatos}>
-        <View style={styles.card}>
-          <Image style={styles.image}
+      <View >
+        <View >
+          <Image 
             source={{uri: this.state.misDatos.foto}} 
             resizeMode = 'cover'
           />
@@ -68,7 +68,7 @@ class Perfil extends Component {
         />
         </View>
         :
-        <Text>Aun no hay publicaciones</Text>
+        <Text style={styles.letra}>Aun no hay publicaciones</Text>
         }
       </View>
       </>
@@ -88,23 +88,30 @@ class Perfil extends Component {
 
 
 const styles = StyleSheet.create({
-    boton: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10
-    },
-    letra:{
-        fontFamily: 'Copperplate',
-        fontSize: 20
-
-    },
-    text:{
-      fontSize: 18,
-      fontWeight: 'bold',
-      marginLeft: 50
-    }
+  boton:{
+    textAlign: 'center',
+    backgroundColor: '#d8bbf1',
+    padding: 5,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    marginBottom: 5,
+    fontWeight: 'bold',
+    color:'#8e4cc4',
+    fontSize: 17,
+  },
+  letra:{
+    
+      fontSize: 20,
+      textAlign: 'center',
+      marginBottom: 20,
+      color:'#8e4cc4',
+  },
+  text:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  }
 })
 export default Perfil
-
 
