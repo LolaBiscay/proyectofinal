@@ -11,15 +11,14 @@ class LoginScreen extends Component {
         }
     }
 
-    componentDidMount(){ //recibimos a user
+    componentDidMount(){ 
       auth.onAuthStateChanged(user => { 
-        if(user !== null){ //Si user es distinto de null me redirige
+        if(user !== null){ 
           this.props.navigation.navigate('TabNavigation')
         }
       })
       
     }
-
 
     loguear(email, password){
         auth.signInWithEmailAndPassword(email, password)

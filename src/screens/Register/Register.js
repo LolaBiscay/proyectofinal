@@ -9,7 +9,8 @@ class Register extends Component {
             username:'',
             email:'',
             password:'',
-            biografia: ''
+            biografia: '',
+            error: ''
         }
     }
 
@@ -26,12 +27,13 @@ class Register extends Component {
             )
         })
         .then(resp => this.props.navigation.navigate('Home'))
-        .catch(err => console.log(err))      
+        .catch(err => this.setState({error: `Error: ${err.message}`}))      
     }
 
   render() {
     return (
     <View style={styles.container}>
+        <Text> {this.state.error}</Text>
         <View>
             <Text style={styles.registro}>Formulario de registro</Text>
             <TextInput
@@ -63,12 +65,21 @@ class Register extends Component {
                 onChangeText={text => this.setState({biografia: text})}
                 value={this.state.biografia}
             />
+
+            {
+                this.state.username == "" || this.state.email == "" || this.state.password == "" ? 
+                <TouchableOpacity>
+                    <Text style={styles.boton} >Registrarme</Text>
+                </TouchableOpacity>    
+                :
             <View>
                 <TouchableOpacity onPress={()=> this.registrarUsuario(this.state.username, this.state.email, this.state.password,this.state.biografia)}>
                 {/* /le paso el estado con la info que el usuario cargo en el formulario*/}
                     <Text style={styles.boton} >Registrarme</Text>
                 </TouchableOpacity>
             </View>
+
+            }
             <View>
                 <Text style={styles.texto}>Ya tienes un cuenta?</Text>
                 <TouchableOpacity onPress={ () => this.props.navigation.navigate('Login')}>
