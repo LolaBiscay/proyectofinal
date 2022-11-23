@@ -132,7 +132,7 @@ class Post extends Component {
             <Text style={styles.likesCount}>{this.state.likesCount} Likes</Text>
     
             <View style={styles.container2}>
-                <Text style={styles.subtitle}>Descripcion: {this.props.data.description}</Text>
+                <Text style={styles.subtitle}>Descripción: {this.props.data.description}</Text>
             </View>
            
     
@@ -145,7 +145,7 @@ class Post extends Component {
                         'Comments',
                         {id:this.props.id}
                         )}>
-                    <Text style={styles.comentario}>ver los {this.state.commentCount} comentarios</Text>
+                    <Text style={styles.comentario}> ver los {this.state.commentCount} comentarios</Text>
         
                 </TouchableOpacity> :
     
@@ -188,7 +188,6 @@ class Post extends Component {
             borderWidth: 3,
             borderRadius: 10,
         },
-        
         container1:{
             justifyContent: 'left',
             backgroundColor: 'white',
@@ -197,17 +196,15 @@ class Post extends Component {
             width: '100%',
             
         },
-       
         container2:{
             flex:3,
             margintop: 60,
             marginBottom: 10,
         },
-    
         subtitle:{
-            fontFamily: 'Copperplate',
-            fontSize: 20
-    
+            // fontFamily: 'Open Sans', 
+            fontSize: 20,
+            marginTop: 20
         },
         image:{
             height: 265,
@@ -231,13 +228,15 @@ class Post extends Component {
     
         comentario: {
             color: "black",
-            fontFamily: 'Copperplate',
+            // fontFamily: 'Open Sans',
+            // fontFamily: 'Copperplate',
         },
 
         textUser: {
             fontSize: 20,
             fontWeight: 'bold', 
-            marginBottom: 10
+            marginBottom: 10,
+            // fontFamily: 'Open Sans',
             
         },
 

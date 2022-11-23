@@ -1,12 +1,10 @@
-import {View, Text } from 'react-native'
 import React from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons'; 
-import Home from '../screens/Home/Home'
+import HomeNavigation from './HomeNavigation';
 import Perfil from '../screens/Perfil/Perfil';
 import Posts from '../screens/Posts/Posts'
-import HomeNavigation from './HomeNavigation';
 import Search from '../screens/Search/Search'
 
 
