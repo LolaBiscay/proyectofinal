@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, TextInput, TouchableOpacity,  FlatList, } from 'react-native'
+import { Text, View, StyleSheet, TextInput, TouchableOpacity,  FlatList,Image } from 'react-native'
 import React, { Component } from 'react'
 import { auth, db } from '../../firebase/config'
 import { SearchBar } from 'react-native'
@@ -50,7 +50,10 @@ class Search extends Component {
   
     return( 
         <View style={styles.container}>
-            <Text style={styles.search}> SEARCH </Text>
+            <Image style={styles.image}
+            source={require('../../../assets/search.png')}
+            resizeMode = 'contain'
+            />
             <TextInput style={styles.input}
               onChangeText={ text => this.setState( {busqueda:text} )}
               placeholder='Ingresa tu busqueda'
@@ -72,7 +75,7 @@ class Search extends Component {
                   params:{
                     email: item.data.email
                   }})}>
-                  <Text style={styles.textUser}>{item.data.username}</Text>
+                  <Text style={styles.textUsuario}>{item.data.username}</Text>
                 </TouchableOpacity>  
                 
                 </View>}
@@ -92,7 +95,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginLeft: 10,
   },
-  textUser:{
+  textUsuario:{
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 5
@@ -117,12 +120,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     fontWeight: 'bold',
     color:'#8e4cc4',
-    fontSize: 17 
+    fontSize: 17,
+    marginTop: 10
 },
-  search:{
-    textAlign: 'center',
-    fontSize: 50
-  }
+image:{
+  height: 200,
+  marginTop: 5,
+}
 })
 
 

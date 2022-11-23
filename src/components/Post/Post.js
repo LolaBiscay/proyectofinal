@@ -177,13 +177,12 @@ class Post extends Component {
     const styles = StyleSheet.create({
         container:{
             flexDirection: 'column',
-            padding: 40,
+            padding: 20,
             justifyContent:'space-between',
             alignItems:'center',
             margin: 200,
             marginBottom: 10,
             backgroundColor: 'white',
-            
             marginTop: 20,
             flex: 1,
             borderWidth: 3,

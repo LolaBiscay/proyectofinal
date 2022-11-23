@@ -47,17 +47,16 @@ class Posts extends Component {
                 cuandoSubaLaImagen = {(url)=> this.cuandoSubaLaImagen(url)}
                 /> : 
               <View>
-                <TextInput
+                <TextInput style={styles.input}
                     keyboardType='default'
                     onChangeText={text => this.setState({description:text})}
                     value={this.state.description}
-                    style={styles.input}
                     placeholder='Deja tu descripcion'
                 />
                 <TouchableOpacity
                 onPress={()=> this.enviarPost(this.state.description) }
                 >
-                    <Text>Enviar Post</Text>
+                    <Text style={styles.boton}>Enviar Post</Text>
                     
 
 
@@ -75,9 +74,27 @@ const styles = StyleSheet.create({
         flex:1
     }, 
     input:{
-        borderWidth:1,
-        height:48
-    }
+        borderColor: '#ccc',
+        borderWidth: 2,
+        marginBottom: 5,
+        padding: 10,
+        fontSize: 15,
+        borderRadius: 5,
+        margin: 10,
+        textAlign: 'center'
+      },
+      boton:{
+        textAlign: 'center',
+        backgroundColor: '#d8bbf1',
+        padding: 5,
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        marginBottom: 5,
+        fontWeight: 'bold',
+        color:'#8e4cc4',
+        fontSize: 17
+    },
 })
 
 export default Posts

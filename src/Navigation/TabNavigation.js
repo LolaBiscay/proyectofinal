@@ -27,7 +27,8 @@ export default function TabNavigation (){
             name = 'Perfil' 
             component={Perfil}
             options={{
-                tabBarIcon: () => <FontAwesome name="user" size={24} color='#44166a'/> 
+                tabBarIcon: () => <FontAwesome name="user" size={24} color='#44166a'/> ,
+                headerShown: false
 
             }}
             />

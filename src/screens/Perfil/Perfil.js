@@ -45,20 +45,24 @@ class Perfil extends Component {
     }
     render(){
         return(
-            <View>
+            <View >
                   <>
       <View >
+      <Image style={styles.image}
+          source={require('../../../assets/profile.png')}
+          resizeMode = 'contain'
+        />
         <View >
           <Image 
             source={{uri: this.state.misDatos.foto}} 
             resizeMode = 'cover'
           />
-          <Text style={styles.text}>Username: {this.state.misDatos.username}</Text>
-          <Text style={styles.text}>Email: {this.state.misDatos.email}</Text>
+          <Text style={styles.text}>USERNAME: {this.state.misDatos.username}</Text>
+          <Text style={styles.text}>EMAIL: {this.state.misDatos.email}</Text>
         </View>      
-       {<Text style={styles.text}>Biografia: {this.state.misDatos.biografia}</Text>    }
-        <Text style={styles.text}>Cantidad de posts: {this.state.posteos.length}</Text>
-        <Text style={styles.text}>Publicaciones:</Text>
+       {<Text style={styles.text}>BIOGRIAFÍA: {this.state.misDatos.biografia}</Text>    }
+        <Text style={styles.text}>CANTIDAD DE POSTEOS: {this.state.posteos.length}</Text>
+        <Text style={styles.text}>PUBLICACIONES:</Text>
         {this.state.posteos.length >= 1 ? 
         <View >
           <FlatList 
@@ -101,7 +105,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   letra:{
-    
       fontSize: 20,
       textAlign: 'center',
       marginBottom: 20,
@@ -111,7 +114,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginLeft: 10,
-  }
+    color: '#602293',
+    // marginBottom: 10
+  },
+  image:{
+    height: 120,
+    // marginTop: 5,
+    marginBottom: 1
+  },
+  
 })
 export default Perfil
 
