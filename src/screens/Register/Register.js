@@ -40,7 +40,7 @@ class Register extends Component {
                 style={styles.input}
                 placeholder='Escribe tu nombre de usuario'
                 keyboardType='default'
-                onChangeText={text => this.setState({username: text})} //guarda en el estado el cambio del input
+                onChangeText={text => this.setState({username: text})}
                 value={this.state.username}
             />
             <TextInput
@@ -74,7 +74,6 @@ class Register extends Component {
                 :
             <View>
                 <TouchableOpacity onPress={()=> this.registrarUsuario(this.state.username, this.state.email, this.state.password,this.state.biografia)}>
-                {/* /le paso el estado con la info que el usuario cargo en el formulario*/}
                     <Text style={styles.boton} >Registrarme</Text>
                 </TouchableOpacity>
             </View>
